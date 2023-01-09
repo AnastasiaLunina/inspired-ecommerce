@@ -1,0 +1,79 @@
+html {
+position: relative;
+box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
+
+body {
+min-width: 320px;
+min-height: 100vh;
+font-family: Arial, sans-serif;
+background-color: $second-color;
+color: $main-color;
+}
+
+img, svg {
+max-width: 100%;
+max-height: 100%;
+height: auto;
+display: block;
+}
+
+
+button {
+padding: 0;
+cursor: pointer;
+background-color: transparent;
+border: none;
+color: inherit;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+margin: 0;
+}
+
+/*
+Доступно скрываю элементы
+*/
+
+.visually-hidden {
+position: fixed;
+transform: scale(0);
+}
+
+
+/*
+Пример контейнера
+
+Если контейнер 1180px по макету,
+то для max-width прибавляем паддинги 30px*2, 
+в итоге 1240px
+Чтобы контент не прижимался к краям экрана
+*/
+
+.container {
+max-width: 1240px;
+padding: 0 30px;
+margin: 0 auto;
+}

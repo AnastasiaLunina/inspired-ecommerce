@@ -4,11 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- to preload fonts -->
+  <link rel="preload" href="fonts/inter-v12-latin_cyrillic-600.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/inter-v12-latin_cyrillic-700.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/inter-v12-latin_cyrillic-regular.woff2" as="font" crossorigin>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="icon/site.webmanifest">
+  <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#9f00a7">
+  <meta name="theme-color" content="#ffffff">
   <title>Inspired - Online Underwear Store</title>
 </head>
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container header__container">
       <a href="tel:89304902620" class="header__phone header__link">8 930 490 26 20</a>
       <img class="header__logo" src="img/logo.svg" alt="logo Inspired">
       <div class="header__navigation">
@@ -55,7 +67,7 @@
 
         <ul class="navigation__category category">
           <li class="category__item">
-            <a href="#" class="category__link">Bra</a>
+            <a href="#" class="category__link category__link_active">Bra</a>
           </li>
           <li class="category__item">
             <a href="#" class="category__link">Panties</a>

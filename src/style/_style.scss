@@ -12,9 +12,10 @@ box-sizing: inherit;
 body {
 min-width: 320px;
 min-height: 100vh;
-font-family: Arial, sans-serif;
+font-family: Inter, sans-serif;
 background-color: $second-color;
 color: $main-color;
+font-weight: 400;
 }
 
 img, svg {
@@ -26,6 +27,7 @@ display: block;
 
 
 button {
+display: block;
 padding: 0;
 cursor: pointer;
 background-color: transparent;
@@ -73,7 +75,19 @@ transform: scale(0);
 */
 
 .container {
-max-width: 1240px;
-padding: 0 30px;
+--max-width: 1180px;
+--padding: 30px;
+max-width: calc(var(--max-width) + var(--padding) * 2);
+padding: 0 var(--padding);
 margin: 0 auto;
+
+@include laptop {
+    --max-width: 880px;
+}
+@include laptop {
+    --max-width: 620px;
+}
+@include laptop {
+    --padding: 15px;
+}
 }

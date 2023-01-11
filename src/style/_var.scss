@@ -4,5 +4,24 @@ $light-gray: #DCDCDC;
 $gray: #8A8A8A;
 $dark-gray: #404040;
 
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 540px;
+
+@mixin laptop {
+    @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
 
 

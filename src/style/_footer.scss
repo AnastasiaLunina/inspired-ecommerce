@@ -66,21 +66,21 @@
             grid-area: category;
         }   
         
-        &_social {
+        &-social {
             grid-area: social;
             justify-self: center;
         }
         
-        &_contacts {
+        &-contacts {
             grid-area: contacts;
         }   
         
-        &_copyright {
+        &-copyright {
             grid-area: copyright;
             align-self: flex-end;
         }
         
-        &_development {
+        &-development {
             grid-area: development;
         }
     }  

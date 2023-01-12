@@ -4,7 +4,7 @@
     height: 18px;
     border-radius: 50%;
     
-    &_check {
+    &-check {
         border: 0.4px solid $gray;
     }
 
@@ -19,16 +19,16 @@
         border-radius: 50%;
     }
   
-    &_red:after {
+    &-red:after {
         background-color: red;
     } 
     
-    &_white:after {
+    &-white:after {
         background-color: #fff;
         border: 1px solid $gray;
     }
     
-    &_black:after {
+    &-black:after {
         background-color: black;
     }
 }

@@ -74,6 +74,17 @@ transform: scale(0);
 Чтобы контент не прижимался к краям экрана
 */
 
+main {
+    margin-bottom: 120px;
+
+    @include tablet {
+        --max-width: 80px;
+    }
+    @include mobile {
+        --padding: 60px;
+    }
+}
+
 .container {
 --max-width: 1180px;
 --padding: 30px;

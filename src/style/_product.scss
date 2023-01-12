@@ -10,6 +10,10 @@
 
     &__image {
         margin-bottom: 16px;
+
+        @include tablet {
+            margin-bottom: 10px;
+        }
     }
 
     &__title {
@@ -17,6 +21,12 @@
         font-size: 14px;
         line-height: 17px;
         margin-bottom: 13px;
+
+        @include tablet {
+            margin-bottom: 5px;
+            font-size: 12px;
+            line-height: 15px;
+        }
     }
 
     &__row {
@@ -24,11 +34,20 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 12px;
+
+        @include tablet {
+            margin-bottom: 3px;
+        }
     }
 
     &__price {
         font-size: 14px;
         line-height: 17px;
+
+        @include tablet {
+            font-size: 12px;
+            line-height: 15px;
+        }
     }
 
     &__btn-favorite {
@@ -50,9 +69,5 @@
         display: flex;
         align-items: center;
         gap: 3px;
-    }
-
-    &__color-item {
-    
     }
 }

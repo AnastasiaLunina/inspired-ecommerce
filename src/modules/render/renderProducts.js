@@ -1,3 +1,6 @@
+import card from '../../img/card.jpg';
+
+
 export const renderProducts = () => {
     const products = document.querySelector('.goods');
 
@@ -9,7 +12,7 @@ export const renderProducts = () => {
             <li class="goods__item">
                 <article class="product">
                 <a href="#" class="product__link">
-                    <img class="product__image" src="img/card.jpg" alt="Microfiber Balconette-Bra Wien">
+                    <img class="product__image" src="${card}" alt="Microfiber Balconette-Bra Wien">
                     <h3 class="product__title">Microfiber Balconette-Bra Wien</h3>
                 </a>
                 <div class="product__row">
@@ -33,7 +36,7 @@ export const renderProducts = () => {
             <li class="goods__item">
                 <article class="product">
                 <a href="#" class="product__link">
-                    <img class="product__image" src="img/card.jpg" alt="Microfiber Balconette-Bra Wien">
+                    <img class="product__image" src="${card}" alt="Microfiber Balconette-Bra Wien">
                     <h3 class="product__title">Microfiber Balconette-Bra Wien</h3>
                 </a>
                 <div class="product__row">
@@ -57,7 +60,7 @@ export const renderProducts = () => {
             <li class="goods__item">
                 <article class="product">
                 <a href="#" class="product__link">
-                    <img class="product__image" src="img/card.jpg" alt="Microfiber Balconette-Bra Wien">
+                    <img class="product__image" src="${card}" alt="Microfiber Balconette-Bra Wien">
                     <h3 class="product__title">Microfiber Balconette-Bra Wien</h3>
                 </a>
                 <div class="product__row">
@@ -81,7 +84,7 @@ export const renderProducts = () => {
             <li class="goods__item">
                 <article class="product">
                 <a href="#" class="product__link">
-                    <img class="product__image" src="img/card.jpg" alt="Microfiber Balconette-Bra Wien">
+                    <img class="product__image" src="${card}" alt="Microfiber Balconette-Bra Wien">
                     <h3 class="product__title">Microfiber Balconette-Bra Wien</h3>
                 </a>
                 <div class="product__row">
@@ -105,7 +108,7 @@ export const renderProducts = () => {
             <li class="goods__item">
                 <article class="product">
                 <a href="#" class="product__link">
-                    <img class="product__image" src="img/card.jpg" alt="Microfiber Balconette-Bra Wien">
+                    <img class="product__image" src="${card}" alt="Microfiber Balconette-Bra Wien">
                     <h3 class="product__title">Microfiber Balconette-Bra Wien</h3>
                 </a>
                 <div class="product__row">
@@ -129,7 +132,7 @@ export const renderProducts = () => {
             <li class="goods__item">
                 <article class="product">
                 <a href="#" class="product__link">
-                    <img class="product__image" src="img/card.jpg" alt="Microfiber Balconette-Bra Wien">
+                    <img class="product__image" src="${card}" alt="Microfiber Balconette-Bra Wien">
                     <h3 class="product__title">Microfiber Balconette-Bra Wien</h3>
                 </a>
                 <div class="product__row">

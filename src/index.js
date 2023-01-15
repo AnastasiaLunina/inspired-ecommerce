@@ -7,6 +7,17 @@ import { mainPage } from './modules/mainPage/mainPage';
 import { womenMainPage } from './modules/mainPage/womenMainPage';
 import { menMainPage } from './modules/mainPage/menMainPage';
 import { router } from './modules/router';
+import { getData } from './modules/getData';
+
+const init = async () => {
+    const data = await getData('http://localhost:8024/api/goods', {
+        gender: 'men',
+        category: 'bathrobes',
+    });
+    console.log('data: ', data)
+}
+
+init();
 
 router.on('*', () => {
     renderHeader();

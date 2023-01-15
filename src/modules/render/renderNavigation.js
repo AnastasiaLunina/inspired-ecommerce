@@ -63,7 +63,7 @@ export const renderNavigation = (gender) => {
             }
             }
             ),
-        })
+        },)
     )
 
     const category = createElement('ul', 
@@ -75,3 +75,4 @@ export const renderNavigation = (gender) => {
         appends: categoryElems,
     });
 } 
+

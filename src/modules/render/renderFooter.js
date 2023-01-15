@@ -1,7 +1,19 @@
 export const renderFooter = () => {
-    const footer = document.querySelector('.footer');
+    // const footer = document.querySelector('.footer');
 
-    footer.innerHTML = `
+    // navigation.textContent = '';
+
+    // const container = createElement('div', 
+    // {
+    //     className: 'footer',
+    // },
+    // {
+    //     parent: footer,
+    // });
+
+   
+   
+    `
     <div class="container">
         <div class="footer__container">
         <div class="footer-item footer__item-category footer-category">

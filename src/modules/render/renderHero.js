@@ -1,4 +1,5 @@
 import { createElement } from "../createElement";
+import { TITLE } from '../const';
 
 const container = createElement('div', 
 {
@@ -44,6 +45,6 @@ export const renderHero = (gender) => {
 
     hero.append(container)
 
-    titleHero.textContent = gender === 'women' ? 'New collection Balconette-Bra' : 'New collection of boxers';
-
+    titleHero.textContent = TITLE[gender].title;
+    linkHero.href = `#/product/${TITLE[gender].id}`;
 } 

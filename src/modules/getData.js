@@ -9,13 +9,13 @@ export const getData = async (urlApi, param, cbError = () => {}) => {
         } 
     
         const response = await fetch(url);
-    
-        if (!response.ok) {
-            throw new Error(response.statusText)
-        }
 
         const data = await response.json();
     
+        if (!response.ok) {
+            throw new Error(data.message)
+        }
+
         return data
         
     } catch(error) {

@@ -19,16 +19,16 @@
         border-radius: 50%;
     }
   
-    &-red:after {
-        background-color: red;
-    } 
+    // &-red:after {
+    //     background-color: red;
+    // } 
     
-    &-white:after {
-        background-color: #fff;
-        border: 1px solid $gray;
-    }
+    // &-white:after {
+    //     background-color: #fff;
+    //     border: 1px solid $gray;
+    // }
     
-    &-black:after {
-        background-color: black;
-    }
+    // &-black:after {
+    //     background-color: black;
+    // }
 }

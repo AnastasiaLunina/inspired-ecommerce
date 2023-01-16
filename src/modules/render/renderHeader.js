@@ -40,9 +40,19 @@ const container = createElement('div',
     className: 'container header__container', 
     innerHTML: `
         <a href="tel:89304902620" class="header__phone header__link">8 930 490 26 20</a>
-        <img class="header__logo" src="${logo}" alt="logo Inspired">
 `
 });
+
+createElement('a', 
+{
+    className: 'header__logo',
+    href: '/#',
+    innerHTML: `<img class="header__logo" src="${logo}" alt="logo Inspired">`
+}, 
+{
+    parent: container,
+}
+)
 
 const nav = createElement('div', 
 {
@@ -52,25 +62,29 @@ const nav = createElement('div',
     parent: container,
 });
 
-createElement('ul', {
+createElement('ul', 
+{
     className: 'header__nav-list',
 }, 
 {
     parent: nav,
     appends: [
-        createElement('li', {
+        createElement('li', 
+        {
             className: 'header__nav-item',
         }, 
         {
             append: searchButton,
         }),
-        createElement('li', {
+        createElement('li', 
+        {
             className: 'header__nav-item',
         }, 
         {
             append: cartLink,
         }),
-        createElement('li', {
+        createElement('li', 
+        {
             className: 'header__nav-item',
         }, 
         {

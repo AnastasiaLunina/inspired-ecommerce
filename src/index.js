@@ -27,6 +27,10 @@ const init = async () => {
         router.on('/', () => {
             mainPage();
         });
+
+        router.on('search', (data) => {
+            console.log(data.params.value);
+        });
         
         router.on('women', () => {
             womenMainPage();

@@ -1,5 +1,6 @@
 import './index.html';
 import './index.scss';
+import { createElement } from './modules/createElement';
 import { API_URL, DATA } from './modules/const';
 
 import { renderHeader } from './modules/render/renderHeader';
@@ -12,37 +13,51 @@ import { getData } from './modules/getData';
 import { createCssColors } from './modules/createCssColors';
 
 const init = async () => {
-    DATA.navigation = await getData(`${API_URL}/api/categories`);
-    DATA.colors = await getData(`${API_URL}/api/colors`);
+    try {
+      router.on('*', () => {
+            renderHeader();
+            renderFooter();
+        });
 
-    createCssColors(DATA.colors);
+        DATA.navigation = await getData(`${API_URL}/api/categories`);
+        DATA.colors = await getData(`${API_URL}/api/colors`);
 
-    router.on('*', () => {
-        renderHeader();
-        renderFooter();
-    });
-    
-    router.on('/', () => {
-        mainPage();
-    });
-    
-    router.on('women', () => {
-        womenMainPage();
-    });
-    
-    router.on('men', () => {
-        menMainPage();
-    });
-    
-    // setTimeout(() => {
-    //     router.navigate('men');
-    // }, 3000)
-    
-    // setTimeout(() => {
-    //     router.navigate('women');
-    // }, 6000)
-    
-    router.resolve();
+        createCssColors(DATA.colors);
+        
+        router.on('/', () => {
+            mainPage();
+        });
+        
+        router.on('women', () => {
+            womenMainPage();
+        });
+        
+        router.on('men', () => {
+            menMainPage();
+        });
+        
+        // setTimeout(() => {
+        //     router.navigate('men');
+        // }, 3000)
+        
+        // setTimeout(() => {
+        //     router.navigate('women');
+        // }, 6000)
+        
+    } catch(e) {
+        createElement('h2', 
+        {
+            textContent: 'Something went wrong. Try again later.'
+        },
+        {
+            parent: document.querySelector('main'),
+            cb(h2) {
+                h2.style.textAlign = 'center'
+            }
+        })
+    } finally {
+        router.resolve();
+    }
 }
 
 init();

@@ -1,0 +1,55 @@
+[
+  {
+    "fio": "Сеньор Помидор Степанович",
+    "address": "Ул. Пушкина дом Калатушкина",
+    "phone": "555555",
+    "email": "tratata@mail.com",
+    "delivery": "delivery",
+    "order": [
+      { "id": "7114582958", "count": "2", "size": "XL", "color": "2" },
+      { "id": "1579697076", "count": "1", "size": "L", "color": "10" }
+    ],
+    "id": "2639464165",
+    "createdAt": "Wed, 11 Jan 2023 16:44:56 GMT"
+  },
+  {
+    "fio": "Сеньор Помидор Степанович",
+    "address": "Ул. Пушкина дом Калатушкина",
+    "phone": "555555",
+    "email": "tratata@mail.com",
+    "delivery": "pickup",
+    "order": [
+      { "id": "1676762708", "count": "1", "size": "S", "color": "4" },
+      { "id": "3186213662", "count": "2", "size": "M", "color": "5" }
+    ],
+    "id": "2805038731",
+    "createdAt": "Wed, 11 Jan 2023 16:24:26 GMT"
+  },
+  {
+    "fio": "Сеньор Помидор Степанович",
+    "address": "Ул. Пушкина дом Калатушкина",
+    "phone": "555555",
+    "email": "tratata@mail.com",
+    "delivery": "pickup",
+    "order": [
+      { "id": "17059142194", "count": "1", "size": "XS", "color": "1" },
+      { "id": "8888866276", "count": "1", "size": "XS", "color": "1" }
+    ],
+    "id": "8320385775",
+    "createdAt": "Wed, 11 Jan 2023 11:14:51 GMT"
+  },
+  {
+    "fio": "Сеньор Помидор Степанович",
+    "address": "Ул. Пушкина дом Калатушкина",
+    "phone": "555555",
+    "email": "tratata@mail.com",
+    "delivery": "pickup",
+    "order": [
+      { "id": "11582733935", "count": "2", "size": "XL", "color": "2" },
+      { "id": "12525067858", "count": "1", "size": "XL", "color": "4" },
+      { "id": "2269903069", "count": "1", "size": "XL", "color": "1" }
+    ],
+    "id": "0281824848",
+    "createdAt": "Wed, 11 Jan 2023 10:11:11 GMT"
+  }
+]

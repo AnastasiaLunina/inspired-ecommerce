@@ -1,79 +1,105 @@
+import { createElement } from "../createElement";
+import { DATA } from "../const";
+import { router } from "../router"; 
+
+const createFooterCategory = () => {
+    const footerCategory = createElement('div', 
+    {
+        className: 'footer-item footer__item-category footer-category',
+    });
+
+    createElement('h2', 
+    {
+        className: 'footer__title footer-category__title',
+        textContent: 'Catalog',
+    }, 
+    {
+        parent: footerCategory,
+    });
+
+    const footerCategoryList = createElement('ul', 
+    {
+        className: 'footer-category__list',
+    }, 
+    {
+        parent: footerCategory,
+    });
+
+    for (const key in DATA.navigation) {
+        const footerCategoryItem = createElement('li',
+        {
+            className: 'footer-category__item',
+        }, 
+        {
+            parent: footerCategoryList,
+            append: createElement('h3', 
+            {
+                className: 'footer-category__subtitle',
+            }, 
+            {
+                append: createElement('a', 
+                {
+                    className: 'footer__link', 
+                    href: `#`,
+                    textContent: DATA.navigation[key].title
+                }, 
+                {
+                    cb(el) {
+                        el.addEventListener('click', e => {
+                            e.preventDefault();
+                            router.navigate(key);
+                        })
+                    }
+                })
+            })
+        });
+
+        createElement('ul',
+        {
+            className: 'footer-category__sublist',
+        },
+        {
+            parent: footerCategoryItem,
+            appends: DATA.navigation[key].list.map(item => createElement(
+                'li', 
+                {
+                    className: 'footer-category__subitem',
+                },
+                {
+                    append: createElement('a', 
+                    {
+                        className: 'footer__link',
+                        href: `#${key}/${item.slug}`,
+                        textContent: item.title,
+                    })
+                }
+            ))
+        })
+    };
+
+    return footerCategory;
+} 
+
 export const renderFooter = () => {
-    // const footer = document.querySelector('.footer');
+    const footer = document.querySelector('.footer');
 
-    // navigation.textContent = '';
+    footer.textContent = '';
 
-    // const container = createElement('div', 
-    // {
-    //     className: 'footer',
-    // },
-    // {
-    //     parent: footer,
-    // });
+    const container = createElement('div', 
+    {
+        className: 'container footer__container',
+    },
+    {
+        parent: footer,
+        append: createFooterCategory(),
+    }, 
+ );
 
-   
-   
-    `
-    <div class="container">
-        <div class="footer__container">
-        <div class="footer-item footer__item-category footer-category">
-            <h2 class="footer__title footer-category__title">Catalog</h2>
-
-            <ul class="footer-category__list">
-            <li class="footer-category__item">
-                <h3 class="footer-category__subtitle">
-                <a href="#" class="footer__link">Women</a>
-                </h3>
-
-                <ul class="footer-category__sublist">
-                <li class="footer-category__subitem">
-                    <a href="#" class="footer__link">Bra</a>
-                </li>
-                <li class="footer-category__subitem">
-                    <a href="#" class="footer__link">Underwear</a>
-                </li>
-                <li class="footer-category__subitem">
-                    <a href="#" class="footer__link">Socks</a>
-                </li>
-                <li class="footer-category__subitem">
-                    <a href="#" class="footer__link">Gowns</a>
-                </li>
-                <li class="footer-category__subitem">
-                    <a href="#" class="footer__link">Thermo</a>
-                </li>
-                <li class="footer-category__subitem">
-                    <a href="#" class="footer__link">Pajamas</a>
-                </li>
-                </ul>
-
-            </li>
-
-            <li class="footer-category__item">
-                <h3 class="footer-category__subtitle">
-                <a href="#" class="footer__link">Men</a>
-                </h3>
-                <ul class="footer-category__sublist">
-                <li class="footer-category__subitem">
-                    <a href="#" class="footer__link">Underwear</a>
-                </li>
-                <li class="footer-category__subitem">
-                    <a href="#" class="footer__link">Socks</a>
-                </li>
-                <li class="footer-category__subitem">
-                    <a href="#" class="footer__link">Robes</a>
-                </li>
-                <li class="footer-category__subitem">
-                    <a href="#" class="footer__link">Thermo</a>
-                </li>
-                </ul>
-            </li>
-            </ul>
-        </div>
-
-        <div class="footer-item footer__item-social footer-social">
-            <h2 class="footer__title footer-social__title">Contact us</h2>
-            <p class="footer-social__subtitle">You can find us here:</p>
-            <ul class="footer-social__list">
+   container.insertAdjacentHTML('beforeend', `
+    <div class="footer-item footer__item-social footer-social">
+        <h2 class="footer__title footer-social__title">Contact us</h2>
+        <p class="footer-social__subtitle">You can find us here:</p>
+        <ul class="footer-social__list">
             <li class="footer-social__item">
                 <a href="#" class="footer-social__link footer-social__link-vk footer__link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -88,29 +114,27 @@ export const renderFooter = () => {
                 </svg>                                   
                 </a>
             </li>
-            </ul>
-        </div>
+        </ul>
+    </div>
 
-        <div class="footer-item footer__item-contacts footer-contacts">
-            <a class="footer__link" href="mailto:Inspired@gmail.com">Inspired@gmail.com</a>
-            <a class="footer__link" href="tel:89304902620">8 930 490 26 20</a>
-        </div>
+    <div class="footer-item footer__item-contacts footer-contacts">
+        <a class="footer__link" href="mailto:Inspired@gmail.com">Inspired@gmail.com</a>
+        <a class="footer__link" href="tel:89304902620">8 930 490 26 20</a>
+    </div>
 
-        <div class="footer-item footer__item-copyright footer-copyright">
-            <p>© INSPIRED, 2023</p>
-        </div>
+    <div class="footer-item footer__item-copyright footer-copyright">
+        <p>© INSPIRED, 2023</p>
+    </div>
 
-        <div class="footer-item footer__item-development footer-development">
-            <ul class="footer-development__list">
+    <div class="footer-item footer__item-development footer-development">
+        <ul class="footer-development__list">
             <li class="footer-development__item">
                 Designer: <a href="#" class="footer__link">Anastasia Ilina</a>
             </li>
             <li class="footer-development__item">
                 Developer: <a href="#" class="footer__link">Anastasia Lunina</a>
             </li>
-            </ul>
-        </div>
-        </div>
-  </div>  
-    `;
+        </ul>
+    </div>
+   `);
 }

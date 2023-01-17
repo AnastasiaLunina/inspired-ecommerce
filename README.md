@@ -1,28 +1,24 @@
-# WEBPACK
+## JS app for underwear store
 
-ссылка на youtube
-https://youtu.be/o8KMucDpSno
+In process
+## Commands
 
-Для установки пакетов используйте команду npm install
-
-## Команды
-
-### Запуск сервера для разработки
+### Start dev server
 ```shell
 npm run start
 ```
 
-### Сборка проекта без оптимизации
+### Bundle app for development
 ```shell
 npm run build-dev
 ```
 
-### Сборка проекта с оптимизацией
+### Bundle app for production
 ```shell
 npm run build-prod
 ```
 
-### Очистка папки dist
+### Clear dist
 ```shell
 npm run clear
 ```

@@ -5,11 +5,10 @@ import { API_URL, DATA } from './modules/const';
 
 import { renderHeader } from './modules/render/renderHeader';
 import { renderFooter } from './modules/render/renderFooter';
-import { mainPage } from './modules/mainPage/mainPage';
-import { womenMainPage } from './modules/mainPage/womenMainPage';
-import { menMainPage } from './modules/mainPage/menMainPage';
+import { mainPage } from './modules/mainPage';
 import { router } from './modules/router';
 import { getData } from './modules/getData';
+import { categoryPage } from './modules/categoryPage';
 import { createCssColors } from './modules/createCssColors';
 
 const init = async () => {
@@ -33,12 +32,14 @@ const init = async () => {
         });
         
         router.on('women', () => {
-            womenMainPage();
+            mainPage('women');
         });
         
         router.on('men', () => {
-            menMainPage();
+            mainPage('men');
         });
+
+        router.on('/:gender/:category', categoryPage);
         
         // setTimeout(() => {
         //     router.navigate('men');
@@ -49,6 +50,7 @@ const init = async () => {
         // }, 6000)
         
     } catch(e) {
+        console.warn(e);
         createElement('h2', 
         {
             textContent: 'Something went wrong. Try again later.'

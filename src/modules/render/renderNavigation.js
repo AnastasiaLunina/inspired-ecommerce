@@ -2,7 +2,7 @@ import { createElement } from '../createElement';
 import { DATA } from '../const';
 
 let flag = false;
-let oldGender;
+let oldGender = 'women';
 
 export const renderNavigation = (gender, category) => {
     const navigation = document.querySelector('.navigation');
@@ -17,6 +17,10 @@ export const renderNavigation = (gender, category) => {
         return;
     }
 
+    if (gender === 'all') {
+        gender = oldGender;
+    } 
+    
     oldGender = gender;
  
     flag = true;
@@ -77,10 +81,11 @@ export const renderNavigation = (gender, category) => {
 
                     elem.classList.add('category__link_active')
                 })
-            }
+        }
             }
             ),
-        },)
+        },
+        )
     )
 
     createElement('ul', 

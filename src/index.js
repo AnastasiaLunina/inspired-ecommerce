@@ -5,11 +5,12 @@ import { API_URL, DATA } from './modules/const';
 
 import { renderHeader } from './modules/render/renderHeader';
 import { renderFooter } from './modules/render/renderFooter';
-import { mainPage } from './modules/mainPage';
+import { mainPageController } from './modules/controller/mainPageController';
 import { router } from './modules/router';
 import { getData } from './modules/getData';
-import { categoryPage } from './modules/categoryPage';
+import { categoryPageController } from './modules/controller/categoryPageController';
 import { createCssColors } from './modules/createCssColors';
+import { searchPageController } from './modules/controller/searchController';
 
 const init = async () => {
     try {
@@ -24,7 +25,7 @@ const init = async () => {
         createCssColors(DATA.colors);
         
         router.on('/', () => {
-            mainPage();
+            mainPageController();
         });
 
         router.on('search', (data) => {
@@ -32,14 +33,16 @@ const init = async () => {
         });
         
         router.on('women', () => {
-            mainPage('women');
+            mainPageController('women');
         });
         
         router.on('men', () => {
-            mainPage('men');
+            mainPageController('men');
         });
 
-        router.on('/:gender/:category', categoryPage);
+        router.on('/:gender/:category', categoryPageController);
+
+        router.on('search', searchPageController)
         
         // setTimeout(() => {
         //     router.navigate('men');

@@ -1,12 +1,12 @@
 import './index.html';
 import './index.scss';
-import { createElement } from './modules/createElement';
+import { createElement } from './modules/utils/createElement';
 import { API_URL, DATA } from './modules/const';
 
 import { renderHeader } from './modules/render/renderHeader';
 import { renderFooter } from './modules/render/renderFooter';
 import { mainPageController } from './modules/controller/mainPageController';
-import { router } from './modules/router';
+import { router } from './modules/utils/router';
 import { getData } from './modules/getData';
 import { categoryPageController } from './modules/controller/categoryPageController';
 import { createCssColors } from './modules/createCssColors';

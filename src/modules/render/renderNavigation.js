@@ -1,4 +1,4 @@
-import { createElement } from '../createElement';
+import { createElement } from '../utils/createElement';
 import { DATA } from '../const';
 
 let flag = false;
@@ -20,7 +20,7 @@ export const renderNavigation = (gender, category) => {
     if (gender === 'all') {
         gender = oldGender;
     } 
-    
+
     oldGender = gender;
  
     flag = true;

@@ -1,4 +1,4 @@
-import { createElement } from "../createElement";
+import { createElement } from "../utils/createElement";
 import { TITLE } from '../const';
 
 const container = createElement('div', 

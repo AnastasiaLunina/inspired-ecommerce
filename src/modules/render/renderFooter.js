@@ -1,6 +1,6 @@
-import { createElement } from "../createElement";
+import { createElement } from "../utils/createElement";
 import { DATA } from "../const";
-import { router } from "../router"; 
+import { router } from "../utils/router"; 
 
 const createFooterCategory = () => {
     const footerCategory = createElement('div', 

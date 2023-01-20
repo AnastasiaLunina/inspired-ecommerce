@@ -1,5 +1,5 @@
 import logo from '../../img/logo.svg';
-import { createElement } from '../createElement';
+import { createElement } from '../utils/createElement';
 import { search, searchToggle } from './renderSearch';
 
 export const searchButton = createElement('button', 

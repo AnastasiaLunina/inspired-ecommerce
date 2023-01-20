@@ -1,6 +1,6 @@
 import { getData } from '../getData';
 import { API_URL, DATA, COUNT_PAGINATION } from '../const';
-import { createElement } from '../createElement';
+import { createElement } from '../utils/createElement';
 import { renderPagination } from './renderPagination';
 
 const container = createElement ('div', {

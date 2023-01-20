@@ -1,4 +1,4 @@
-import { router } from '../../modules/router';
+import { router } from '../utils/router';
 import { renderNavigation } from '../render/renderNavigation';
 import { renderHero } from '../render/renderHero';
 import { renderProducts } from '../render/renderProducts';
@@ -14,6 +14,10 @@ export const searchPageController = (routerData) => {
     
     const params = {
         search: routerData.params.value,
+    };
+
+    if (routerData.params?.page) {
+        params.page = routerData.params?.page;
     }
 
     renderNavigation('all');

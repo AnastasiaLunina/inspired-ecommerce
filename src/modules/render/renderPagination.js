@@ -1,5 +1,5 @@
-import { createElement } from "../createElement";
-import { getUrl } from "../getUrl";
+import { createElement } from "../utils/createElement";
+import { getUrl } from "../utils/getUrl";
 
 export const renderPagination = (wrapperPagination, page, pages, count) => {
     wrapperPagination.textContent = '';
